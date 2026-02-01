@@ -1,0 +1,131 @@
+/* General */
+body {
+    background-color: #121212;
+    color: #f8fafc;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+}
+
+header {
+    padding: 2rem;
+    background: linear-gradient(90deg, #ffffff, #d6d6d6);
+    border-bottom: 2px solid #000000;
+}
+
+/* Contenedor del Player */
+.player-container {
+    margin: 50px auto;
+    padding: 20px;
+    width: 300px;
+    background: linear-gradient(90deg, #ffffff, #e6e6e6);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* Animación del Ecualizador SVG */
+#equalizer {
+    width: 150px;
+    height: 80px;
+}
+
+.bar {
+    transform-origin: bottom;
+    animation: bounce 1.2s ease-in-out infinite;
+}
+
+/* Diferentes tiempos para que no se muevan todas iguales */
+.bar:nth-child(2) { animation-delay: 0.2s;}
+.bar:nth-child(3) { animation-delay: 0.4s;} 
+.bar:nth-child(4) { animation-delay: 0.1s;}
+.bar:nth-child(5) { animation-delay: 0.5s;}
+
+@keyframes bounce {
+    0%, 100% { transform: scaleY(0.3); }
+    50% { transform: scaleY(1); }
+}
+
+/* Estilo de audios */
+audio {
+    margin-top: 10px;
+    filter: invert(100%); /* Para que combine con el tema oscuro */
+}
+
+
+
+
+
+
+ /* Contenedor principal del Home */
+.home-container {
+    padding: 40px 20px;
+    max-width: 900px; /* Un poco más ancho para que quepan bien */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Alineación horizontal de las tarjetas */
+.genre-grid {
+    display: flex;           /* Activa el modo flexible */
+    flex-direction: row;     /* Las pone una al lado de la otra */
+    justify-content: center; /* Las centra horizontalmente */
+    gap: 30px;               /* Espacio entre las tarjetas */
+    margin-top: 30px;
+    width: 100%;
+}
+
+/* Tarjetas individuales */
+.genre-card {
+    text-decoration: none;
+    color: white;
+    width: 200px;            /* Tamaño fijo para que sean simétricas */
+    padding: 30px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;           /* Para centrar el contenido interno */
+    flex-direction: column;
+    align-items: center;
+    margin: 10px; /* Esto añade 10px de espacio alrededor de cada tarjeta */
+
+}
+ 
+/* Iconos pequeños */
+.icon {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+    margin-bottom: 12px;
+}
+
+/* Efecto hover */
+.genre-card:hover {
+    transform: translateY(-10px);
+    border-color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+
+
+.reggaeton-card:hover {
+    border-color: #ff0000;
+    box-shadow: 0 0 25px #ff000080;
+}
+
+.salsa-card:hover {
+    border-color: #ff7300;
+    box-shadow: 0 0 25px #ff7300;
+}
+
+.trap-card:hover {
+    border-color: #09ff00;
+    box-shadow: 0 0 25px #09ff00;
+}
+
+.player-container h2, 
+.player-container p,
+.player-container article {
+    color: #000000; 
+    text-shadow: 0px 2px 4px rgba(168, 168, 168, 0.5); /* Sombra suave para mejor lectura */
+}

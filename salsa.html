@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KJCF Radio - Salsa</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        header h1 { color:black; } 
+            header p { color:black; } 
+
+        /* Personalización local para la categoría Salsa */
+        :root {
+            --accent-color: #ff7300; /* Naranja */
+            --secondary-color: #2e0051; /* Morado */
+        }
+        
+        header {
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .bar {
+            fill: var(--accent-color);
+            animation-duration: 0.8s; /* Animación más rápida para salsa */
+        }
+
+        .bar:nth-child(even) {
+            fill: var(--secondary-color);
+        }
+    </style>
+   
+</head>
+<body>
+    <header>
+        <h1>KJCF Radio 🎷</h1>
+        <nav>
+            <a href="index.html" style="color:black;">Home</a> | 
+            <a href="salsa.html" style="font-weight: bold; color:#ff7300;">Salsa</a> |
+            <a href="trap.html" style="color:black;">Trap</a> |
+            <a href="reggaeton.html"style="color:black;">Reggaeton</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="player-container">
+            <h2>Salsa</h2>
+            
+            <svg id="equalizer" viewBox="0 0 100 50">
+                <rect class="bar" x="0" y="10" width="8" height="40" />
+                <rect class="bar" x="15" y="5" width="8" height="45" />
+                <rect class="bar" x="30" y="20" width="8" height="30" />
+                <rect class="bar" x="45" y="0" width="8" height="50" />
+                <rect class="bar" x="60" y="15" width="8" height="35" />
+                <rect class="bar" x="75" y="5" width="8" height="45" />
+                <rect class="bar" x="90" y="20" width="8" height="30" />
+            </svg>
+
+            <div class="songs">
+                <article>
+                    <p>Hector Lavoe – Juanito Alimaña | Salsa</p>
+                    <audio controls>
+                        <source src="hectorlavoe_juanitoalimana.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                </article>
+                <article>
+                    <p>Yiyo Sarante - Corazón de Acero | Salsa</p>
+                    <audio controls>
+                        <source src= "yiyosarante_corazonacero.mp3" type="audio/mpeg">
+                    </audio>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 KJCF Radio - Kevin Cabreja 10146048</p>
+    </footer>
+</body>
+</html>
+
+
+
